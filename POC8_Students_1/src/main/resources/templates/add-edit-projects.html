@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body th:style="'background: url(/images/15.jpg) no-repeat center center fixed ;background-size:cover;margin-top:70px'">
+    <div style="width:700px;margin-left:450px;background-color:#FFF09F;height:650px">
+        <h2 style="color:white;background-color:#267BDB;text-align:center;padding:8px">ADD PROJECT</h2>
+        <div>
+            <div>
+                <div style="margin-left:70px;">
+                    <form action="#" th:action="@{|/createProject/${studentId}|}" th:object="${project}" method="post">
+                    <img th:src="@{/images/e31.jpg}" style="margin-left: 160px;" width="280" height="250" alt=""/> 
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label"  style="font-weight:bold;color:#FF6A35;font-size:22px"><img th:src="@{/images/e24.png}" alt="" width="60" height="60"/>&nbsp;&nbsp;Project Name</label> 
+                                <input type="text" th:field="*{projectName}" class="form-control" 
+                                            id="firstName" style="width:500px;padding:8px;font-size:18px" placeholder="Enter Project Name" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label"  style="font-weight:bold;color:#FF6A35;font-size:22px"><img th:src="@{/images/e25.png}" alt="" width="60" height="60"/>&nbsp;&nbsp;Project Technology</label> 
+                                <input type="text" th:field="*{projectTech}" class="form-control" 
+                                            id="lastName" style="width:500px;padding:8px;font-size:18px" placeholder="Enter Technology Used" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-success" value=" Submit " style="width:450px;font-size:22px;margin-left:60px;margin-top:20px;font-weight:bold">
+                            </div>
+
+                            <input type="hidden" id="projectId" th:field="*{projectId}">
+    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

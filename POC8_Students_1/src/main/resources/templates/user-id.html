@@ -1,0 +1,25 @@
+<html xmlns:th="https://thymeleaf.org">   
+<body th:style="'background: url(/images/20.jpg) no-repeat center center fixed ;background-size:cover;'">
+<div th:if="${value}" style="background-color: bisque;width:700px;margin-left:450px">
+<h1 style="text-align: center;background-color: #3B2EDD;color: white;padding: 10px;margin-bottom: 0px;">STUDENT DETAILS</h1>
+<img th:src="@{/images/10.jpg}" style="margin-top:20px;margin-left:190px" width="350" height="350" alt=""/>
+<table class="table table-striped" style="width:700px;height:300px;margin-top:20px" th:cellpading="4">
+<caption>Student Record Based on ID</caption>
+        <tr>
+            <th style="background-color: #47AE3E;color: white;font-size:20px;" scope="col">Student ID:</th>
+            <th style="background-color: #E9E9E9;font-size:20px;" th:text="${student.id}" scope="col"></th>
+        </tr>
+        <tr> <th style="background-color: #47AE3E;color: white;font-size:20px;" scope="col">First Name of Student:</th>
+            <th style="background-color: #E9E9E9;font-size:20px;" th:text="${student.fname}" scope="col"></th></tr>
+           
+            <tr><th style="background-color: #47AE3E;color: white;font-size:20px;" scope="col">Last Name of Student: </th>
+                <th style="background-color: #E9E9E9;font-size:20px;" th:text="${student.lname}" scope="col"></th></tr>
+           <tr><th style="background-color: #47AE3E;color: white;font-size:20px;" scope="col">Contact Number of Student: </th>
+               <th style="background-color: #E9E9E9;font-size:20px;" th:text="${student.contact}" scope="col"></th></tr>
+            <tr><th style="background-color: #47AE3E;color: white;font-size:20px;" scope="col">Email ID of Student: </th>
+                <th style="background-color: #E9E9E9;font-size:20px;" th:text="${student.email}" scope="col"></th></tr>
+</table>
+</div>
+<div th:if="${!value}">Hello</div>
+</body>
+</html> 
